@@ -1,24 +1,24 @@
-# template-react-hook
+# use-toggle
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/brunoscopelliti/template-react-hook/blob/main/LICENSE)
-[![npm version](https://img.shields.io/npm/v/@bscop/template-react-hook.svg?style=flat)](https://www.npmjs.com/package/@bscop/template-react-hook)
-[![CircleCI Status](https://circleci.com/gh/brunoscopelliti/template-react-hook.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/brunoscopelliti/template-react-hook)
-[![Coverage](https://img.shields.io/codecov/c/github/brunoscopelliti/template-react-hook)](https://app.codecov.io/gh/brunoscopelliti/template-react-hook/)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/brunoscopelliti/use-toggle/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@bscop/use-toggle.svg?style=flat)](https://www.npmjs.com/package/@bscop/use-toggle)
+[![CircleCI Status](https://circleci.com/gh/brunoscopelliti/use-toggle.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/brunoscopelliti/use-toggle)
+[![Coverage](https://img.shields.io/codecov/c/github/brunoscopelliti/use-toggle)](https://app.codecov.io/gh/brunoscopelliti/use-toggle/)
 
-A template to create a new React custom hook.
+A React hook that offers a shortcut to toggle a boolean state.
 
 ## Install
 
 ```
-npm i @bscop/template-react-hook
+npm i @bscop/use-toggle
 ```
 
 ## Usage
 
 ```js
-import useHook from "@bscop/template-react-hook";
+import useToggle from "@bscop/use-toggle";
 
-useHook();
+const [state, toggle] = useToggle();
 ```
 
 ## Contribute
