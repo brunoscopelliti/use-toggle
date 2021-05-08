@@ -21,6 +21,8 @@ import useToggle from "@bscop/use-toggle";
 const [state, toggle] = useToggle();
 ```
 
+`useToggle` also accepts the initial value as argument.
+
 ## Contribute
 
 Read the [guidelines](./CONTRIBUTING.md).
