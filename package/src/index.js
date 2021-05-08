@@ -1,12 +1,28 @@
-import { useState, useCallback } from "react";
+import { useCallback, useState } from "react";
 
-const useCounter =
-  () => {
-    const [count, setCount] = useState(0);
+/**
+ * @callback setState
+ * @returns {void}
+ */
 
-    const increment = useCallback(() => setCount((x) => x + 1), []);
+/**
+ * A React hook that offers a shortcut to toggle a boolean state.
+ * @name useToggle
+ * @param {Boolean} initialValue
+ * @returns {[boolean, setState]}
+ */
+const useToggle =
+  (initialValue) => {
+    const [value, setValue] = useState(!!initialValue);
 
-    return { count, increment };
+    const toggle = useCallback(
+      () => {
+        setValue(!value);
+      },
+      [value]
+    );
+
+    return [value, toggle];
   };
 
-export default useCounter;
+export default useToggle;

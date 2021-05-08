@@ -1,14 +1,32 @@
 import { renderHook, act } from "@testing-library/react-hooks";
-import useCounter from "./";
+import useToggle from "./";
 
-describe("useCounter", () => {
-  it("should increment counter", () => {
-    const { result } = renderHook(() => useCounter());
+describe("useToggle", () => {
+  it("returns `false` as default state", () => {
+    const { result } = renderHook(() => useToggle());
 
-    act(() => {
-      result.current.increment();
-    });
+    const [state] = result.current;
 
-    expect(result.current.count).toBe(1);
+    expect(state).toBe(false);
+  });
+
+  it("returns the state, and the handler to change it", () => {
+    let state, toggle;
+
+    renderHook(
+      () => {
+        [state, toggle] = useToggle(true);
+      }
+    );
+
+    expect(state).toBe(true);
+
+    act(toggle);
+
+    expect(state).toBe(false);
+
+    act(toggle);
+
+    expect(state).toBe(true);
   });
 });
