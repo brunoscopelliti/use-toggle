@@ -1,6 +1,6 @@
 {
   "name": "@bscop/use-toggle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React hook that offers a shortcut to toggle a boolean state.",
   "main": "package/dist/index.js",
   "module": "package/dist/index.es.js",
