@@ -1,15 +1,10 @@
 import { useCallback, useState } from "react";
 
 /**
- * @callback setState
- * @returns {void}
- */
-
-/**
  * A React hook that offers a shortcut to toggle a boolean state.
  * @name useToggle
- * @param {Boolean} initialValue
- * @returns {[boolean, setState]}
+ * @param {boolean} [initialValue]
+ * @returns {[boolean, import("./index").SetState]}
  */
 const useToggle =
   (initialValue) => {

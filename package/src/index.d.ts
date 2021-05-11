@@ -1,4 +1,4 @@
-type SetState = () => void;
+export type SetState = () => void;
 
 declare const useToggle : (initialValue ?: boolean) => [boolean, SetState];
 
